@@ -265,7 +265,7 @@
 
   footer {
     margin: 30px 20px 0;
-    padding: 20px 18px;
+    padding: 22px 18px;
     border-radius: 18px;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -281,6 +281,42 @@
     margin-top: 4px;
     font-size: 12.5px;
     color: var(--ink-soft);
+  }
+
+  .ig-button {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f6a23a 0%, #e0637a 45%, #b04ea8 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 10px 22px -10px rgba(176, 78, 138, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .ig-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px -10px rgba(176, 78, 138, 0.6);
+  }
+
+  .ig-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .ig-button svg {
+    width: 17px;
+    height: 17px;
+    flex: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ig-button { transition: none; }
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -330,7 +366,15 @@
 
   <footer>
     <div class="name">2bin_mom CLASS</div>
-    <div class="sub">문의 · 참여 신청은 인스타 DM @2bin_mom (투빈맘)</div>
+    <div class="sub">문의 · 참여 신청은 인스타 DM으로 알려주세요</div>
+    <a class="ig-button" href="https://www.instagram.com/2bin_mom/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="white" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4.3" stroke="white" stroke-width="1.8"/>
+        <circle cx="17.4" cy="6.6" r="1.15" fill="white"/>
+      </svg>
+      @2bin_mom 인스타 가기
+    </a>
   </footer>
 </div>
 
