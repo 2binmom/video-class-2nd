@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>투빈맘 캔바+영상편집 원데이클래스 2기</title>
+<link rel="icon" href="character.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="투빈맘 캔바+영상편집 원데이클래스 2기">
+<meta property="og:description" content="모집 카드뉴스 10장 + 일정/신청 안내">
+<meta property="og:image" content="https://2binmom.github.io/video-class-2nd/images/slide-01.png">
+<meta property="og:url" content="https://2binmom.github.io/video-class-2nd/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="투빈맘 캔바+영상편집 원데이클래스 2기">
+<meta name="twitter:description" content="모집 카드뉴스 10장 + 일정/신청 안내">
+<meta name="twitter:image" content="https://2binmom.github.io/video-class-2nd/images/slide-01.png">
+<style>
+  :root {
+    --bg: #fdf3ec;
+    --bg-edge: #f7e6da;
+    --surface: #ffffff;
+    --ink: #3d2d2d;
+    --ink-soft: #8a7373;
+    --accent: #e0637a;
+    --accent-soft: #fbe3e6;
+    --border: #f2d9d4;
+    --shadow: 220 60% 20%;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(120% 160% at 50% 0%, var(--bg) 0%, var(--bg-edge) 100%);
+    color: var(--ink);
+    font-family: "Apple SD Gothic Neo", Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", system-ui, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 0 56px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 20px;
+    background: rgba(253, 243, 236, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .brand .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+
+  .brand .title {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .counter {
+    flex: none;
+    font-variant-numeric: tabular-nums;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+
+  .counter b { color: var(--accent); }
+
+  .notices {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 20px 4px;
+  }
+
+  .notice {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px 18px 20px;
+    box-shadow: 0 1px 2px hsla(220, 60%, 20%, 0.05);
+  }
+
+  .notice-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .notice-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .notice-list li {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .notice-list li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .notice-lead {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .step .num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .step .label {
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .step-arrow {
+    flex: none;
+    color: var(--border);
+    font-size: 16px;
+    padding-bottom: 22px;
+  }
+
+  .notice-note {
+    margin: 16px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  .hint {
+    display: flex;
+    width: fit-content;
+    margin: 4px auto 0;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+
+  .reel {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 22px 20px 0;
+    scroll-snap-type: y proximity;
+  }
+
+  figure {
+    margin: 0;
+    scroll-snap-align: start;
+    scroll-margin-top: 72px;
+  }
+
+  .frame {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 2px hsla(220, 60%, 20%, 0.06), 0 14px 32px -18px hsla(220, 60%, 20%, 0.35);
+  }
+
+  .frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background: rgba(61, 45, 45, 0.55);
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  footer {
+    margin: 30px 20px 0;
+    padding: 20px 18px;
+    border-radius: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+
+  footer .name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  footer .sub {
+    margin-top: 4px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  a { color: inherit; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="brand">
+      <span class="eyebrow">2bin_mom · CLASS</span>
+      <span class="title">캔바+영상편집 원데이클래스 2기</span>
+    </div>
+    <div class="counter" id="counter"><b id="counterNow">1</b>/10</div>
+  </header>
+
+  <div class="notices">
+    <section class="notice">
+      <p class="notice-title">📌 일정 안내</p>
+      <ul class="notice-list">
+        <li>다음주 8/19 전후, 2기 모집 게시글 정식 오픈 예정이에요</li>
+        <li>그 전에, 8/18일까지 참여 의사 알려주시면 돼요 :)</li>
+      </ul>
+    </section>
+
+    <section class="notice">
+      <p class="notice-title">📌 신청 진행 순서</p>
+      <p class="notice-lead">선착순 모집이라 아래 순서로 확정됩니다!</p>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><span class="label">참여 의사<br>밝히기</span></div>
+        <span class="step-arrow">→</span>
+        <div class="step"><span class="num">2</span><span class="label">계좌<br>전달</span></div>
+        <span class="step-arrow">→</span>
+        <div class="step"><span class="num">3</span><span class="label">입금 완료<br>= 확정</span></div>
+      </div>
+      <p class="notice-note">인원 모두 모이면 단톡방 초대합니다</p>
+    </section>
+
+    <span class="hint">↓ 쭉 내려서 모집 카드뉴스 10장 확인해주세요</span>
+  </div>
+
+  <div class="reel" id="reel"></div>
+
+  <footer>
+    <div class="name">2bin_mom CLASS</div>
+    <div class="sub">문의 · 참여 신청은 인스타 DM @2bin_mom (투빈맘)</div>
+  </footer>
+</div>
+
+<script>
+  const TOTAL = 10;
+  const reel = document.getElementById("reel");
+
+  for (let i = 1; i <= TOTAL; i++) {
+    const n = String(i).padStart(2, "0");
+    const fig = document.createElement("figure");
+    fig.dataset.index = i;
+    const frame = document.createElement("div");
+    frame.className = "frame";
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = `${i} / ${TOTAL}`;
+    const img = document.createElement("img");
+    img.src = `images/slide-${n}.png`;
+    img.alt = `모집 카드뉴스 ${i}번째 페이지`;
+    img.loading = i < 2 ? "eager" : "lazy";
+    img.width = 1080;
+    img.height = 1350;
+    frame.appendChild(img);
+    frame.appendChild(tag);
+    fig.appendChild(frame);
+    reel.appendChild(fig);
+  }
+
+  const counterNow = document.getElementById("counterNow");
+  const figures = Array.from(reel.querySelectorAll("figure"));
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        let best = null;
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            if (!best || entry.intersectionRatio > best.intersectionRatio) best = entry;
+          }
+        }
+        if (best) counterNow.textContent = best.target.dataset.index;
+      },
+      { threshold: [0.5, 0.75] }
+    );
+    figures.forEach((f) => io.observe(f));
+  }
+</script>
+</body>
+</html>
